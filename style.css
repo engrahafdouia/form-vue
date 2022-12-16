@@ -1,0 +1,130 @@
+.container {
+    margin: auto;
+    width: 500px;
+    overflow: auto;
+    padding: 3rem 2rem;
+  }
+  body{
+    /* background-image: url('bg2.jpg'); */
+    background-size: cover;
+
+background-color: #f3f3f3;
+
+}
+header{
+    background-color: #292e7ebb;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+}
+  #my-form {
+    /* padding: 4rem; */
+    /* background:#241b55fa; */
+    color: black;
+    border-radius: 15px;
+    /* margin-top: 24%; */
+  }
+  
+  #my-form label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: aliceblue;
+  }
+
+  #my-form  input[type='text'] ,input[type='email'] {
+    width: 100%;
+    padding: 1px 5px;
+    /* border-radius: 5px; */
+    border: none;
+    border-bottom: 1px solid rgb(97, 93, 93);
+    background: none;
+    outline: none;
+    /* color: white; */
+    font-size: 16px;
+    caret-color: #91a1cc;
+  }
+  
+   input[type='search'] {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: #dcdce5;
+    border: none;
+    /* border-bottom: 1px solid rgb(97, 93, 93); */
+    /* background: none; */
+    outline: none;
+    /* color: white; */
+    font-size: 18px;
+
+    caret-color: #91a1cc;
+  }
+  /* label{
+   
+  } */
+  #my-form label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top:10px;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 0;
+    color: #a19f9f;
+  }
+ .buttons .button{
+    /* background-color: ; */
+    border: none;
+    
+  }
+ ul li{
+    background: #6C63FF;
+    margin-top: 7px;
+    padding: 10px;
+    border-radius: 15px; 
+    padding: 5px;
+  color: black;
+       
+ }
+.error{
+    background-color: rgb(255, 95, 95);
+    padding:10px
+}
+.error::before{
+  content: '❌';
+}
+.item {
+    position: relative;
+    /* width: 33%;
+    top: 0;
+    left: 50%; */
+
+  }
+  
+  .success{
+    background-color: rgb(47, 255, 127);
+    padding:10px
+  }
+  .success::before{
+    content:'✔️';
+    width:200px
+  }
+
+  .item {
+    position: relative;
+  }
+  
+   
+  .item .icon {
+    position: absolute;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    background: rgba(128, 128, 128, .7);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-family: 'Courier New', Courier, monospace;
+  }

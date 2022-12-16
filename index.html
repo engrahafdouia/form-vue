@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.min.css">
+    <title>Login Form</title>
+</head>
+<body>
+   <header class=" header has-text-centered has-text-white  is-size-5 py-3 is-fixed-top">
+    login Form with vuejs
+   </header>
+
+   <div id="app">
+       <section class="container">
+     
+        <div class="columns pt-6">
+            <div class="column is-6">
+                <img src="undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
+            </div>
+            <div class="column is-6">
+                <div class="columns is-vcentered mt-5">
+                    <div class="column is-8">
+       
+                            <div class="mb-4">
+                            <h3 class="title">Sign In</h3>
+                            <p class="subtitle is-6 has-text-grey mt-5">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>
+                          </div>
+                          <div v-if="message" class="msg" :class=" messageClasses" v-text="message"></div>
+
+                          <form action="#" id="my-form"@submit.prevent="addList">
+                            <div >
+                              <label for="username">Username</label>
+                              <input type="text"  id="username "class="mb-5"v-model.trim="firstName">
+       
+                            </div>
+                            <div >
+                              <label for="email">email</label>
+                              <input type="email"  id="email mb-5"v-model.trim="email">
+       
+                            </div>
+       
+       
+       
+                            <div class="buttons">
+                                <button  class="button  mt-6 is-fullwidth is-dark">submit</button>
+                            </div>
+       
+                          </form>
+
+
+                          <h3  >Preview</h3>
+                          {{ preview }}
+                      
+                          <input type="search"  placeholder="Name"class="mt-4"v-model.trim="searchValue">
+
+                          <div class="buttons">
+                            <button class="button is-primary mt-4"@click="emptyUsers">empty users</button>
+                            <button class="button is-primary mt-4"@click="removeAtLast">remove last users</button>
+
+                          </div>
+       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="items" >
+          <li v-for="(user, i) in filteredList" class="item">#{{ user.id }} {{ user.name }}: {{ user.email }}
+            <span class="icon" @click="removeUser(i)">x</span>
+          </li>
+            <li  class="item" v-for="(user, i) in usersList">
+               #{{ i + 1 }} {{user.name }}: {{ user.email }}
+            
+               <span class="icon" @click="removeUser(i)">x</span>
+            </li>
+          
+        </ul>
+       </section>
+       
+   </div>
+
+
+  <script src="main.js"type="module"></script>
+</body>
+</html>
